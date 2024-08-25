@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://bfhl-frint-v1lh.vercel.app/' // Replace with your frontend URL
+  origin: ['https://bfhl-frint-v1lh.vercel.app',"http://localhost:3001"] // Replace with your frontend URL
 }));
 
 app.use(express.json());
