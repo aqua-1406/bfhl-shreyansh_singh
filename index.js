@@ -1,10 +1,10 @@
 const express = require("express");
-const cors = require("cors"); // Import cors
+// const cors = require("cors"); // Import cors
 
 const app = express();
 
-// Use cors middleware
-app.use(cors());
+// // Use cors middleware
+// app.use(cors());
 
 app.use(express.json());
 
@@ -47,6 +47,3 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
-app.use(cors({
-  origin: 'http://localhost:3000' // Replace with your frontend URL
-}));
