@@ -1,15 +1,16 @@
 const express = require("express");
-// const cors = require("cors"); // Import cors
+const cors = require("cors"); // Import cors
 
 const app = express();
 
-// // Use cors middleware
-// app.use(cors());
+
+
+app.use(cors({
+  origin: 'https://bfhl-frint-v1lh.vercel.app/' // Replace with your frontend URL
+}));
 
 app.use(express.json());
 
-app
-  .route("/test")
 app
   .route("/bfhl")
   .get((req, res) => {
